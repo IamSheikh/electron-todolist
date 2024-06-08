@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <button id="backupButton">Back Up</button>
+    <form id="addTaskForm">
+      <button type="submit">Add Task</button>
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter a new task"
+        required
+        style="text-align: right"
+      />
+    </form>
+    <ul id="taskList"></ul>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

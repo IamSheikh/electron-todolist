@@ -1,0 +1,68 @@
+{
+  "name": "simple-todolist",
+  "version": "1.0.0",
+  "description": "A basic app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "dev": "electron ."
+  },
+  "keywords": [],
+  "author": "Taha Jameel",
+  "license": "ISC",
+  "dependencies": {
+    "electron-is-dev": "^3.0.1",
+    "electron-squirrel-startup": "^1.0.1",
+    "googleapis": "^137.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^30.0.9",
+    "electron-rebuild": "^3.2.9",
+    "parcel": "^2.12.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "SimpleTodolist",
+            "authors": "Taha Jameel",
+            "description": "A simple todolist",
+            "noMsi": true,
+            "setupExe": "SimpleTodoListInstaller.exe",
+            "shortcutName": "STL"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
